@@ -15,6 +15,7 @@
  */
 package org.springframework.samples.petclinic.service;
 
+import java.io.IOException;
 import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -93,7 +94,7 @@ public class ClinicServiceImpl implements ClinicService {
 
     @Override
     @Transactional
-    public void savePet(Pet pet) {
+    public void savePet(Pet pet) throws IOException {
         petRepository.save(pet);
     }
 

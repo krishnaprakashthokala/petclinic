@@ -105,6 +105,8 @@ public class OwnerController {
     public String initUpdateOwnerForm(@PathVariable("ownerId") int ownerId, Model model) {
         Owner owner = this.clinicService.findOwnerById(ownerId);
         model.addAttribute(owner);
+        
+        System.out.println(" owners Api");    
         return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
     }
 

@@ -15,6 +15,7 @@
  */
 package org.springframework.samples.petclinic.repository;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.samples.petclinic.model.BaseEntity;
@@ -54,6 +55,6 @@ public interface PetRepository {
      * @param pet the <code>Pet</code> to save
      * @see BaseEntity#isNew
      */
-    void save(Pet pet);
+    void save(Pet pet) throws IOException;
 
 }
